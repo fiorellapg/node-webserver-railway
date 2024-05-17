@@ -32,6 +32,13 @@ app.get('/elements', (req, res) => {
     })
   });
 
+  app.get('/salidas', (req, res) => {
+    res.render('salidas', {
+      nombre: 'Fiorella Perez',
+      titulo: 'Curso de Node'
+    })
+  });
+
   app.get('*', (req, res)=> {
     res.sendFile(__dirname +'/template/404.html');
   })
